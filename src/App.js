@@ -13,7 +13,9 @@ function App() {
     <div className="App">
       <Router>
         <Products path="/"/>
-        <Notification path="/admin" />
+      </Router>
+      <Router path="/admin" >
+        <Notification />
       </Router>
     </div>
   );
