@@ -14,11 +14,11 @@ function App() {
       <Router>
         <Products path="/"/>
       </Router>
-      <Router path="/admin" >
-        <Notification />
+      <Router >
+        <Notification path="/admin" />
       </Router>
     </div>
   );
-}
+} 
 
 export default App;
