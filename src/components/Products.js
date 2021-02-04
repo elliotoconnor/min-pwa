@@ -148,7 +148,7 @@ const Products = () => {
 
                 <div class="product">
                     <img src={p8} alt="hej" class="productIMG" />
-                    <h2>chokoladekugler</h2>
+                    <h2>Chokoladekugler</h2>
                     <sub>24.95 kr.</sub>
                     <button class="productBTN">Læg i kurv</button>
                 </div>
