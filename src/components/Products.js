@@ -200,7 +200,7 @@ function Products() {
             </article>
 
             <div class="continue">
-                <a href="notification"><button>FORSÆT TIL KASSEN</button></a>
+                <a href="/notification"><button>FORSÆT TIL KASSEN</button></a>
             </div>
         </section>
     )
