@@ -1,5 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { useState } from "react";
+
+import { FaShoppingCart } from "react-icons/fa";
 
 import p1 from "../img/broed.jpg";
 import p2 from "../img/brunsviger.jpg";
@@ -34,6 +37,7 @@ const style = css`
     }
     .product{
         margin:1rem;
+        color:white;
     }
     .product h2, sub{
         color:white;
@@ -49,17 +53,24 @@ const style = css`
         text-decoration:none;
         margin-left:10px;
         margin-top:10px;
-        background-color:rgba(240, 255, 0,1);
+        background-color:rgba(30, 139, 195, 1);
         border-radius:5px;
         height:1.5rem;
     }
-    .productBTN:hover{
-        transition:0.3s;
-        cursor:pointer;
-        background-color:orangered;
-        color:white;
+    .productDLT{
+        border:none;
+        text-decoration:none;
+        margin-left:10px;
+        margin-top:10px;
+        background-color:rgba(207, 0, 15, 1);
+        border-radius:5px;
+        height:1.5rem;
     }
-
+    .productDLT:hover, .productBTN:hover{
+        transition:0.5s;
+        color:white;
+        cursor:pointer;
+    }
     .continue{
         text-decoration:none;
         position: relative;
@@ -82,10 +93,33 @@ const style = css`
         color: rgba(255, 255, 255, 1);
         box-shadow: 0 5px 15px rgba(207, 0, 15, .4);
     }
-    
+    .shopping{
+        margin-top:3rem;
+        margin-left:3rem;
+        font-size:2rem;
+    }   
+    .items{
+        margin-top:4rem;
+        font-size:1rem;
+    }
 `
 
-const Products = () => {
+
+
+function Products() {
+
+    // Sætter varer-nummers oprindelige værdi
+  const [count, setCount] = useState(0);
+
+  // tilføjer varer til kurv
+  const itemAdded = () => {
+    setCount(prevCount => prevCount + 1);
+  };
+
+  // sletter varer fra kurv
+  const itemDeleted = () => {
+    setCount(prevCount => prevCount - 1 );
+  };
 
     return (
         <section css={style}>
@@ -93,6 +127,8 @@ const Products = () => {
             <div class="header">
                 <h1>Benny's Bageri</h1>
                 <img src={hat} alt="hej" />
+                <FaShoppingCart class="shopping"/>
+                <sub class="items">{count}</sub>
             </div>
         
             <article class="products">
@@ -101,62 +137,70 @@ const Products = () => {
                     <img src={p1} alt="hej" class="productIMG" />
                     <h2>Brød</h2>
                     <sub>19.95 kr.</sub>
-                    <button class="productBTN">Læg i kurv</button>
+                    <button class="productBTN" onClick={itemAdded}>Læg i kurv</button>
+                    <button class="productDLT" onClick={itemDeleted}>Slet fra kurv</button>
                 </div>
 
                 <div class="product">
                     <img src={p2} alt="hej" class="productIMG" />
                     <h2>Brunsviger</h2>
                     <sub>23.95 kr.</sub>
-                    <button class="productBTN">Læg i kurv</button>
+                    <button class="productBTN" onClick={itemAdded}>Læg i kurv</button>
+                    <button class="productDLT" onClick={itemDeleted}>Slet fra kurv</button>
                 </div>
 
                 <div class="product">
                     <img src={p3} alt="hej" class="productIMG" />
                     <h2>Cookies</h2>
-                    <sub>15.95 kr.</sub>
-                    <button class="productBTN">Læg i kurv</button>
+                    <button class="productBTN" onClick={itemAdded}>Læg i kurv</button>
+                    <button class="productDLT" onClick={itemDeleted}>Slet fra kurv</button>
                 </div>
 
                 <div class="product">
                     <img src={p4} alt="hej" class="productIMG" />
                     <h2>Drømmekage</h2>
                     <sub>35.95 kr.</sub>
-                    <button class="productBTN">Læg i kurv</button>
+                    <button class="productBTN" onClick={itemAdded}>Læg i kurv</button>
+                    <button class="productDLT" onClick={itemDeleted}>Slet fra kurv</button>
                 </div>
 
                 <div class="product">
                     <img src={p5} alt="hej" class="productIMG" />
                     <h2>Gåsebryst</h2>
                     <sub>24.95 kr.</sub>
-                    <button class="productBTN">Læg i kurv</button>
+                    <button class="productBTN" onClick={itemAdded}>Læg i kurv</button>
+                    <button class="productDLT" onClick={itemDeleted}>Slet fra kurv</button>
                 </div>
 
                 <div class="product">
                     <img src={p6} alt="hej" class="productIMG" />
                     <h2>Jordbærtærte</h2>
                     <sub>39.95 kr.</sub>
-                    <button class="productBTN">Læg i kurv</button>
+                    <button class="productBTN" onClick={itemAdded}>Læg i kurv</button>
+                    <button class="productDLT" onClick={itemDeleted}>Slet fra kurv</button>
                 </div>
 
                 <div class="product">
                     <img src={p7} alt="hej" class="productIMG" />
                     <h2>Kajkage</h2>
                     <sub>19.95 kr.</sub>
-                    <button class="productBTN">Læg i kurv</button>
+                    <button class="productBTN" onClick={itemAdded}>Læg i kurv</button>
+                    <button class="productDLT" onClick={itemDeleted}>Slet fra kurv</button>
                 </div>
 
                 <div class="product">
                     <img src={p8} alt="hej" class="productIMG" />
-                    <h2>Chokoladekugler</h2>
+                    <h2>Romkugle</h2>
                     <sub>24.95 kr.</sub>
-                    <button class="productBTN">Læg i kurv</button>
+                    <button class="productBTN" onClick={itemAdded}>Læg i kurv</button>
+                    <button class="productDLT" onClick={itemDeleted}>Slet fra kurv</button>
                 </div>
+                    
 
             </article>
 
             <div class="continue">
-                <a href="/admin"><button>FORSÆT TIL KASSEN</button></a>
+                <a href="/notification"><button>FORSÆT TIL KASSEN</button></a>
             </div>
         </section>
     )

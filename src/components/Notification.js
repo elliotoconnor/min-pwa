@@ -33,7 +33,7 @@ const Notification = () => {
 
     return(
         <section class="Notification" css={style}>
-            <button onClick={etellerandet}>AFSEND VARER</button>
+            <a href="/"><button onClick={etellerandet}>AFSEND VARER</button></a>
         </section>
     )
 }
