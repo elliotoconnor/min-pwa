@@ -27,6 +27,10 @@ const style = css`
 
 const Notification = () => {
 
+    OneSignal.push(["addListenerForNotificationOpened", function(event) {
+        console.log("OneSignal notification clicked:", event);
+      }]);
+
     const etellerandet = () => {
         console.log("noget...");
     }

@@ -118,7 +118,7 @@ function Products() {
 
   // sletter varer fra kurv
   const itemDeleted = () => {
-    setCount(prevCount => prevCount - 1 );
+    setCount(prevCount => prevCount - 1);
   };
 
     return (
