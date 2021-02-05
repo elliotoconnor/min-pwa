@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router } from '@reach/router';
+import { BrowserRouter as Router, } from "react-router-dom";
 import './App.css';
 import OneSignal from 'react-onesignal';
 import Products from './components/Products';
