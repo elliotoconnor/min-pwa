@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Router>
         <Products path="/"/>
-        <Notification path="/notification" />
+        <Notification path="https://bennys-bageri.netlify.app/notification" />
       </Router>
     </div>
   );
