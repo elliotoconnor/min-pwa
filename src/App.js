@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Products path="/"/>
       </Router>
-      <Router>
+      <Router >
         <Notification path="notification" />
       </Router>
     </div>
