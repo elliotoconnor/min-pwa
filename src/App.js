@@ -5,9 +5,7 @@ import OneSignal from 'react-onesignal';
 import Products from './components/Products';
 import Notification from './components/Notification';
 
-OneSignal.initialize('2f4f9432-f62c-45f0-91a1-2d5ef683666f', {
-  safari_web_id:"web.onesignal.auto.694eada3-a476-4a33-8c61-99aa6c1d60b0",
-});
+OneSignal.initialize("0b523ce6-7311-4040-9a01-3f4ed01c3429");
 
 function App() {
   return (
