@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Route, Redirect, Switch } from "react-router";
+import { BrowserRouter as Route, Redirect, Switch, } from "react-router";
 import './App.css';
 import OneSignal from 'react-onesignal';
 import Products from './components/Products';
@@ -17,7 +17,7 @@ function App() {
         <Route path="admin">
           <Notification />
         </Route>
-        <Redirect path="offline.html" />
+        <Redirect from="/" to="offline.html" />
       </div>
     </Switch>
   );
