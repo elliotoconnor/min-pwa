@@ -102,6 +102,29 @@ const style = css`
         margin-top:4rem;
         font-size:1rem;
     }
+
+    /*--MEDIA QUERIES--*/
+    @media screen and (max-width:750px){
+
+        .header{
+            display:block;
+            padding:2rem 0;
+        }
+        .product{
+            margin-top:3rem;
+        }
+        .products{
+            display:block;
+        }
+        .productIMG{
+            max-width:25%;
+            max-height:100%;
+        }
+        .continue{
+            display:block;
+            right:14rem;
+        }
+    }
 `
 
 
