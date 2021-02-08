@@ -11,7 +11,7 @@
       "src": "192x192.png",
       "type": "image/png",
       "sizes": "192x192",
-      "options": "maskable any"
+      "purpose": "maskable any"
     },
     {
       "src": "512x512.png",
