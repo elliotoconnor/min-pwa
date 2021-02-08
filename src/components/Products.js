@@ -125,6 +125,15 @@ const style = css`
             right:14rem;
         }
     }
+    @media screen and (max-width:500px){
+
+        .container{
+            margin-right: 25rem; 
+        }
+        .productIMG{
+            max-width:50%;
+        }
+    }
 `
 
 
@@ -146,7 +155,7 @@ function Products() {
 
     return (
         <section css={style}>
-
+            <div className="container">
             <div class="header">
                 <h1>Benny's Bageri</h1>
                 <img src={hat} alt="hej" />
@@ -224,6 +233,7 @@ function Products() {
 
             <div class="continue">
                 <a href="/"><button>FORSÆT TIL KASSEN</button></a>
+            </div>
             </div>
         </section>
     )
