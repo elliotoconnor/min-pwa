@@ -104,7 +104,7 @@ const style = css`
     }
 
     /*--MEDIA QUERIES--*/
-    @media screen and (max-width:750px){
+    @media screen and (max-width:800px){
 
         .header{
             display:block;
@@ -117,7 +117,7 @@ const style = css`
             display:block;
         }
         .productIMG{
-            max-width:25%;
+            max-width:33%;
             max-height:100%;
         }
         .continue{
@@ -125,13 +125,11 @@ const style = css`
             right:14rem;
         }
     }
-    @media screen and (max-width:500px){
+    @media screen and (max-width:350px){
 
-        .container{
-            margin-right: 25rem; 
-        }
         .productIMG{
             max-width:50%;
+            max-height:100%;
         }
     }
 `
